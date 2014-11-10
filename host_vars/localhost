@@ -1,0 +1,4 @@
+---
+# On Debian based systems it's in /usr/bin, on FreeBSD it's in /usr/local/bin,
+# hence relative part.  Alternative is to use "/usr/bin/env python2".
+ansible_python_interpreter: "python2"

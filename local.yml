@@ -1,0 +1,16 @@
+---
+- name: test playbook
+  hosts: all
+  gather_facts: yes
+  connection: local
+
+  tasks:
+  - debug:
+      msg: "{{hostvars}}"
+      # msg: "{{inventory_hostname_short}}"
+  # Use this to create "special" groups that will be used to setup a particular
+  # host.
+  - group_by:
+      key: "{{ansible_hostname}}"
+
+# vim:ts=2:sw=2:noai:nosi
